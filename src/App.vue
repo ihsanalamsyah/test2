@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld />
+    <CardItem />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Vue2Filters from 'vue2-filters'
+import CardItem from './components/CardItem.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+    CardItem
+},
+  mixins: [Vue2Filters.mixin]
 }
 </script>
 

@@ -1,0 +1,238 @@
+{
+  "detail": [
+    {
+      "jam": "03:15",
+      "tanggal": "18 Februari 2021",
+      "nama": "Ayam Tangkap",
+      "pengeluaran": 77249,
+      "id": 1
+    },
+    {
+      "jam": "03:15",
+      "tanggal": "18 Februari 2021",
+      "nama": "Mie Rebus",
+      "pengeluaran": 32154,
+      "id": 2
+    },
+    {
+      "jam": "00:20",
+      "tanggal": "17 Februari 2021",
+      "nama": "Soto Kuning",
+      "pengeluaran": 34992,
+      "id": 3
+    },
+    {
+      "jam": "05:59",
+      "tanggal": "17 Februari 2021",
+      "nama": "Ayam Geprek",
+      "pengeluaran": 37674,
+      "id": 4
+    },
+    {
+      "jam": "05:45",
+      "tanggal": "16 Februari 2021",
+      "nama": "Otak-otak",
+      "pengeluaran": 12345151,
+      "id": 5
+    },
+    {
+      "jam": "09:55",
+      "tanggal": "20 Februari 2021",
+      "nama": "123",
+      "pengeluaran": 123,
+      "id": 6
+    },
+    {
+      "jam": "10:20",
+      "tanggal": "20 Februari 2021",
+      "nama": "somay",
+      "pengeluaran": 100000,
+      "id": 7
+    },
+    {
+      "jam": "10:21",
+      "tanggal": "20 Februari 2021",
+      "nama": "yrs",
+      "pengeluaran": 123,
+      "id": 8
+    },
+    {
+      "jam": "10:23",
+      "tanggal": "20 Februari 2021",
+      "nama": "Bakso",
+      "pengeluaran": 123,
+      "id": 10
+    },
+    {
+      "jam": "10:31",
+      "tanggal": "20 Februari 2021",
+      "nama": "yes1123",
+      "pengeluaran": 4444,
+      "id": 11
+    },
+    {
+      "jam": "11:36",
+      "tanggal": "20 Februari 2021",
+      "nama": "asu",
+      "pengeluaran": 3,
+      "id": 12
+    },
+    {
+      "jam": "11:37",
+      "tanggal": "20 Februari 2021",
+      "nama": "yess",
+      "pengeluaran": 813,
+      "id": 13
+    },
+    {
+      "jam": "13:48",
+      "tanggal": "20 Februari 2021",
+      "nama": "",
+      "pengeluaran": null,
+      "id": 14
+    },
+    {
+      "jam": "16:52",
+      "tanggal": "20 Februari 2021",
+      "nama": "yes",
+      "pengeluaran": 123,
+      "id": 15
+    },
+    {
+      "jam": "12:16",
+      "tanggal": "21 Februari 2021",
+      "nama": "yess",
+      "pengeluaran": 98877,
+      "id": 16
+    },
+    {
+      "jam": "00:12",
+      "tanggal": "22 Februari 2021",
+      "nama": "yesss",
+      "pengeluaran": 333333,
+      "id": 18
+    }
+  ],
+  "items": [
+    {
+      "tanggal": "18 Februari 2021",
+      "id": 1,
+      "details": [
+        {
+          "jam": "03:15",
+          "nama": "Ayam Tangkap",
+          "pengeluaran": 77249,
+          "id": 1
+        },
+        {
+          "jam": "03:15",
+          "nama": "Mie Rebus",
+          "pengeluaran": 32154,
+          "id": 2
+        }
+      ]
+    },
+    {
+      "tanggal": "17 Februari 2021",
+      "id": 2,
+      "details": [
+        {
+          "jam": "00:20",
+          "nama": "Soto Kuning",
+          "pengeluaran": 34992,
+          "id": 3
+        },
+        {
+          "jam": "05:59",
+          "nama": "Ayam Geprek",
+          "pengeluaran": 37674,
+          "id": 4
+        }
+      ]
+    },
+    {
+      "tanggal": "16 Februari 2021",
+      "id": 2,
+      "details": [
+        {
+          "jam": "05:45",
+          "nama": "Otak-otak",
+          "pengeluaran": 12345151,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "tanggal": "20 Februari 2021",
+      "id": 5,
+      "details": [
+        {
+          "jam": "09:55",
+          "nama": "123",
+          "pengeluaran": 123,
+          "id": 6
+        },
+        {
+          "jam": "10:20",
+          "nama": "somay",
+          "pengeluaran": 100000,
+          "id": 7
+        },
+        {
+          "jam": "10:21",
+          "nama": "yrs",
+          "pengeluaran": 123,
+          "id": 8
+        },
+        {
+          "jam": "10:23",
+          "nama": "Bakso",
+          "pengeluaran": 123,
+          "id": 10
+        },
+        {
+          "jam": "10:31",
+          "nama": "yes1123",
+          "pengeluaran": 4444,
+          "id": 11
+        },
+        {
+          "jam": "11:36",
+          "nama": "asu",
+          "pengeluaran": 3,
+          "id": 12
+        },
+        {
+          "jam": "11:37",
+          "nama": "yess",
+          "pengeluaran": 813,
+          "id": 13
+        },
+        {
+          "jam": "13:48",
+          "nama": "",
+          "pengeluaran": null,
+          "id": 14
+        },
+        {
+          "jam": "16:52",
+          "nama": "yes",
+          "pengeluaran": 123,
+          "id": 15
+        }
+      ]
+    },
+    {
+      "tanggal": "21 Februari 2021",
+      "id": 5,
+      "details": [
+        {
+          "jam": "12:16",
+          "nama": "yess",
+          "pengeluaran": 98877,
+          "id": 16
+        }
+      ]
+    }
+  ]
+}

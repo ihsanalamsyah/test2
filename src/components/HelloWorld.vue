@@ -1,58 +1,111 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <h1>Diari Jajan Februari 2021</h1>
+    <h2>Pengeluaran Bulan Ini Rp.{{total}}</h2>
+    
+    <div>
+      <b-button v-b-modal="'modal-center'" >TAMBAH ITEM</b-button>
+      <form>
+      <b-modal id="modal-center" hide-header-close centered title="Tambah Entri" ok-title="KIRIM" cancel-title="BATAL">   
+        <label for="formNama">Nama {{ nama }}</label>  
+        <br />
+        <input type="text" v-model="nama" id="formNama" placeholder="Nama Makanan" />
+        <br />
+        <br />
+        <label for="formHarga">Harga {{ harga }}</label>  
+        <br />
+        <input type="number" v-model="harga" id="formHarga" placeholder="Harga" />
+        <br />
+        <br />
+        <p class="display_none">Jam {{ currentTime() }}</p>       
+        <p class="display_none">Tanggal {{ currentDate() }}</p>  
+        <template #modal-footer>
+          <button v-b-modal="'modal-center'" @click="this.$emit('close')" class="btn btn-danger btn-sm m-1">Close</button>
+          <button v-b-modal="'modal-center'" @click="submit()" class="btn btn-primary btn-sm m-1">Submit</button>
+        </template>    
+      </b-modal>
+      </form>   
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 </template>
 
 <script>
+
+import { mapActions } from 'vuex';
+
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
+  methods:{
+    setJSON(data){
+      this.myJson = data
+    },
+    currentTime(){
+    const current = new Date();
+    let currentHours = current.getHours();
+    currentHours = ("0" + currentHours).slice(-2);
+    const time = currentHours + ":" + current.getMinutes();
+    this.time = time
+    return time;
+    },
+    currentDate(){
+    const month = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+    const current = new Date();
+    const date = current.getDate() +" "+ month[current.getMonth() - 5 ]+ " "+ (current.getFullYear() - 1);
+    this.date = date
+    return date;
+    },
+    submit(){ 
+      const input={
+        jam: this.time,
+        tanggal: this.date,
+        nama: this.nama, 
+        pengeluaran: parseInt(this.harga)
+      } 
+      this.addCardItem(input);
+    },
+    ...mapActions(['addCardItem'])
+  },
+  data: function(){
+    return{
+      nama: '',
+      harga: null,
+      myJson: [],
+      total: 0,
+      time: '',
+      date:'',
+      detail:{}
+      }
   }
+    
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
 }
 li {
-  display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
+
+.display_none{
+display: none;
 }
 </style>
